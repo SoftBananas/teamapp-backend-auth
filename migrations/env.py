@@ -9,7 +9,10 @@ from src.core.configs import Config
 from src.core.models.sqlalchemy.base import Base
 
 
-app_config = Config()
+app_config = Config(
+    "configs/prod.yml",
+    ".env"
+)
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config

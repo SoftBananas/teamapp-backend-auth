@@ -1,7 +1,9 @@
 from typing import Any
 
 from sqlalchemy import JSON, MetaData, inspect
-from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import DeclarativeBase, Mapped
+
+from .annotated_types import int_pk, uuid_pk
 
 
 class Base(DeclarativeBase):

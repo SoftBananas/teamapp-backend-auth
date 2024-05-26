@@ -1,7 +1,6 @@
 from blacksheep.server.controllers import Controller, post
-
-from src.core.dto.auth import LoginData
-from src.services.auth import AuthService
+from ...core.dto.auth import LoginData
+from ...services.auth import AuthService
 
 
 class AuthRouter(Controller):

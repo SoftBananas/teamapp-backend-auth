@@ -1,9 +1,10 @@
 from passlib.context import CryptContext
 
-from src.core.configs.hash_config import HashConfig
+from .abstract import Service
+from ..core.configs.hash_config import HashConfig
 
 
-class HashService:
+class HashService(Service):
     def __init__(self, config: HashConfig):
         self.context = CryptContext(schemes=config.schemas, deprecated=config.deprecated)
 

@@ -1,3 +1,5 @@
+import os
+
 from yaml import safe_load
 from dotenv import load_dotenv
 from loguru import logger
@@ -11,8 +13,8 @@ class Config:
 
     def __init__(
             self,
-            config_file: str = "./configs/prod.yml",
-            env_file: str = ".env"
+            config_file: str = "../configs/prod.yml",
+            env_file: str = "../.env"
     ) -> None:
         load_dotenv(dotenv_path=env_file)
         with open(config_file, "r") as config_file:
