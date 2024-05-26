@@ -1,0 +1,13 @@
+hash:
+  schemas: ["bcrypt"]
+  deprecated: "auto"
+
+database:
+  driver: "postgresql+asyncpg"
+
+logger:
+  sink: "teamapp-auth-prod.log"
+  format: "{time}\t|\t{level}\t|\t{message}"
+  level: "DEBUG"
+  rotation: "10MB"
+  compression: "zip"
